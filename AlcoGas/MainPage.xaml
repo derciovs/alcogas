@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="AlcoGas.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Álcool ou Gasolina" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Álcool ou Gasolina vai querer?" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="34" TextAlignment="Center" FontWeight="Bold" FontStyle="Normal" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image Height="601" HorizontalAlignment="Center" Margin="0,0,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Center" Width="456" Source="image/gas.png" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="36,298,0,0" Name="textBoxAlcool" Text="0,000" VerticalAlignment="Top" Width="136" GotFocus="textBoxAlcool_GotFocus" />
+            <TextBox Height="72" HorizontalAlignment="Right" Margin="0,298,144,0" Name="textBoxGasolina" Text="0,000" VerticalAlignment="Top" Width="136" GotFocus="textBoxGasolina_GotFocus" />
+            <Button Content="Calcular" Height="72" HorizontalAlignment="Left" Margin="86,410,0,0" Name="btnCalcular" VerticalAlignment="Top" Width="160" Click="btnCalcular_Click" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="76,282,0,0" Name="textBlock1" Text="Álcool" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="204,282,0,0" Name="textBlock2" Text="Gasolina" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="24,322,0,0" Name="textBlock3" Text="R$" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="164,322,0,0" Name="textBlock4" Text="R$" VerticalAlignment="Top" />
+            <TextBlock Height="38" HorizontalAlignment="Left" Margin="104,142,0,0" Name="textBlock5" Text="Abasteça com:" VerticalAlignment="Top" Width="125" />
+            <TextBlock Height="60" TextAlignment="Center" HorizontalAlignment="Left" Margin="75,180,0,0" Name="textBlockResult" Text="
+                       " VerticalAlignment="Top" FontSize="36" Width="188" FontWeight="Bold" FontStyle="Normal" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
